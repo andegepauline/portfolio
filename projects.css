@@ -1,0 +1,170 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Navbar ===== */
+header {
+  background: #004080;
+  padding: 1rem 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  flex: 1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  text-decoration: underline;
+}
+
+/* ===== Projects Section ===== */
+.projects {
+  flex: 1;
+  padding: 3rem 2rem;
+  background: #e6f0ff;
+}
+
+.projects-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.projects-container h1 {
+  font-size: 2.5rem;
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+.projects-container p {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background: #d0e0ff;
+}
+
+.project-card h2 {
+  color: #004080;
+  margin-bottom: 0.8rem;
+}
+
+.project-card p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.project-card a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 0;
+  width: 100%;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #66ccff;
+}
+
+.footer-links i {
+  font-size: 20px;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}

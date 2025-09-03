@@ -1,0 +1,114 @@
+/* ===== 404 Minimal Page ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e6f0ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error-page {
+  text-align: center;
+  padding: 2rem;
+}
+
+.error-container h1 {
+  font-size: 6rem;
+  color: #004080;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.error-container p {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.error-container .btn {
+  background: #1976d2;
+  color: #fff;
+  padding: 0.9rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.error-container .btn:hover {
+  background: #125aa3;
+  transform: scale(1.05);
+}
+
+/* ===== Lost Cloud Illustration (Extra Puffy) ===== */
+.error-illustration {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 50vw;  /* half the screen width */
+  height: 150px;
+}
+
+.cloud {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0,0,0,0.15);
+  animation: floatCloud 5s ease-in-out infinite alternate;
+}
+
+/* Main puffs */
+.cloud::before,
+.cloud::after,
+.cloud span {
+  content: '';
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Left puff */
+.cloud::before {
+  top: -70px;
+  left: 5%;
+  width: 45%;
+  height: 130px;
+}
+
+/* Right puff */
+.cloud::after {
+  top: -50px;
+  right: 5%;
+  width: 40%;
+  height: 110px;
+}
+
+/* Extra middle puff */
+.cloud span {
+  top: -60px;
+  left: 25%;
+  width: 50%;
+  height: 120px;
+}
+
+/* ===== Keyframes for floating ===== */
+@keyframes floatCloud {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(35px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

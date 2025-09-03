@@ -1,0 +1,187 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Navbar ===== */
+header {
+  background: #004080;
+  padding: 1rem 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  flex: 1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  text-decoration: underline;
+}
+
+/* ===== Skills Section ===== */
+.skills {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.skills h1 {
+  font-size: 2.5rem;
+  color: #004080;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* ===== Skills Container: two columns ===== */
+.skills-container {
+  display: flex; 
+  gap: 3rem; /* increased space between boxes */
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+}
+
+.skills-box {
+  background: #e6f0ff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: left;
+  flex: 1 1 45%; /* base width ~45% of container */
+  min-width: 400px; /* prevents shrinking too much */
+}
+
+
+
+.skills-box h2 {
+  color: #0a2a57;
+  margin-bottom: 1.5rem;
+}
+
+/* Progress Bars */
+.skill {
+  margin-bottom: 1.2rem;
+}
+
+.skill p {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.progress {
+  background: #cce0ff;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 12px;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: #1976d2;
+  border-radius: 8px;
+}
+
+/* Soft Skills */
+.soft-skills {
+  list-style: none;
+  padding-left: 0;
+}
+
+.soft-skills li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 0;
+  width: 100%;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #66ccff;
+}
+
+.footer-links i {
+  font-size: 20px;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
