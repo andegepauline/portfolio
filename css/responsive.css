@@ -1,0 +1,233 @@
+/* ================================
+   Responsive.css
+   Handles responsiveness across all pages
+================================ */
+
+body {
+  overflow-x: hidden;
+}
+
+/* ================================
+   Mobile (max-width: 600px)
+   ================================ */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Hero */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+
+  .profile-picture img {
+    width: 250px;
+    height: 250px;
+  }
+
+  /* Skills */
+  .skills-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .skills-box {
+    min-width: 100%;
+  }
+
+  /* Projects */
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact */
+  .contact-content {
+    flex-direction: column;
+  }
+
+  /* CV */
+  .cv-card {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* ================================
+   Tablet (601px – 1024px)
+   ================================ */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+
+  .profile-picture img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* ================================
+   Large Screens (min-width: 1200px)
+   ================================ */
+@media (min-width: 1200px) {
+  .intro-text h1 {
+    font-size: 3rem;
+  }
+
+  .profile-picture img {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+/* ================================
+   Hamburger Menu
+   ================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001; /* Keep above nav */
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile/tablet hamburger behaviour */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hidden menu default */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #004080;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+
+    /* Animation setup */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 1rem;
+    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.3s ease;
+  }
+
+  /* When active (menu open) */
+  .nav-links.active {
+    max-height: 500px; /* enough for all links */
+    opacity: 1;
+    padding: 1rem;
+  }
+
+  .nav-links a {
+    padding: 0.8rem 0;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ================================
+   Hamburger Animation (bars → X)
+   ================================ */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ================================
+   Responsive adjustments for What I Do section
+================================ */
+
+/* Mobile */
+@media (max-width: 600px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .what-i-do h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-intro {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .services {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .service-box {
+    width: 45%;
+  }
+
+  .what-i-do h2 {
+    font-size: 2rem;
+  }
+}

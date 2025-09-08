@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,6 +6,7 @@
   <title>Pauline Andege - Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
@@ -13,6 +14,14 @@
   <header>
     <nav class="navbar">
       <div class="logo">Pauline Andege</div>
+
+      <!-- Hamburger Menu -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -45,10 +54,45 @@
     </div>
   </section>
 
+  <!-- What I Do Section -->
+<section class="what-i-do">
+  <div class="container">
+    <h2>What I Do</h2>
+    <p class="section-intro">
+      I help turn ideas into working solutions through cloud, Python, and web technologies.
+    </p>
 
+    <div class="services">
+      <div class="service-box">
+        <i class="fas fa-cloud"></i>
+        <h3>Cloud Computing</h3>
+        <p>
+          Designing and deploying applications on AWS, leveraging services like ECS, EC2, and S3 for scalable solutions.
+        </p>
+      </div>
 
-<!-- Footer -->
-<footer>
+      <div class="service-box">
+        <i class="fas fa-code"></i>
+        <h3>Python Development</h3>
+        <p>
+          Writing automation scripts, backend logic, and data-driven applications using Python, Flask, and Django.
+        </p>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Web Development</h3>
+        <p>
+          Creating responsive and user-friendly websites, ensuring seamless experiences across all devices.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- Footer -->
+  <footer>
     <div class="footer-contact">
       <div class="footer-links">
         <a href="mailto:paulinandege@gmail.com" target="_blank">
@@ -66,10 +110,16 @@
     </div>
   </footer>
 
+  <!-- Hamburger Toggle Script -->
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
 
-
-
-
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+  </script>
 
 </body>
 </html>
