@@ -1,3 +1,7 @@
+/* ================================
+   Projects.css
+================================ */
+
 * {
   margin: 0;
   padding: 0;
@@ -55,6 +59,43 @@ header {
   text-decoration: underline;
 }
 
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #004080;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+}
+
 /* Projects Section */
 .projects {
   flex: 1;
@@ -76,9 +117,36 @@ header {
 
 .projects-container p {
   font-size: 1.1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
+/* Project Filters */
+.project-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  background: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #1976d2;
+  transform: scale(1.05);
+}
+
+/* Project Cards */
 .project-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -92,6 +160,16 @@ header {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .project-card:hover {
@@ -126,8 +204,8 @@ footer {
   color: white;
   text-align: center;
   padding: 30px 20px;
-  margin-top: 0;
   width: 100%;
+  margin-top: auto;
 }
 
 .footer-contact {

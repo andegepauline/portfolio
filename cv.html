@@ -22,9 +22,10 @@
 
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+      <!--  <li><a href="projectss.html" class="active">Projectss</a></li> -->
         <li><a href="projects.html">Projects</a></li>
         <li><a href="skills.html">Skills</a></li>
-        <li><a href="cv.html" class="active">CV</a></li>
+        <a href="cv.html" class="active">CV</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -52,7 +53,7 @@
   <footer>
     <div class="footer-contact">
       <div class="footer-links">
-        <a href="mailto:paulinandege@gmail.com" target="_blank">
+        <a href="mailto:paulinandege11@gmail.com" target="_blank">
           <i class="fas fa-envelope"></i> Email
         </a>
         <a href="https://www.linkedin.com/in/pauline-andege-/" target="_blank">
@@ -61,9 +62,12 @@
         <a href="https://github.com/andegepauline" target="_blank">
           <i class="fab fa-github"></i> GitHub
         </a>
+        <a href="https://medium.com/@paulineandege" target="_blank">
+          <i class="fab fa-medium"></i> Medium
+        </a>
       </div>
       
-      <p>© 2025 Pauline Andege | All rights reserved</p>
+      <p>© <span id="year"></span> Pauline Andege | All rights reserved</p>
     </div>
   </footer>
 
@@ -75,6 +79,10 @@
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
+  </script>
+  <script>
+  // Get the current year from the user's system date
+  document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
 </body>

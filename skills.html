@@ -22,9 +22,10 @@
 
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <!-- <li><a href="projectss.html" class="active">Projectss</a></li> -->
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html" class="active">Skills</a></li>
-        <li><a href="cv.html">CV</a></li>
+        <li><a href="skills.html" class="active">Certifications & Skills</a></li>
+        <!-- <li><a href="cv.html">CV</a></li> -->
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -43,29 +44,74 @@
         
         <div class="skill">
           <p>AWS Cloud</p>
-          <div class="progress"><span style="width: 82%"></span></div>
+          <div class="progress"><span style="width: 95%"></span></div>
         </div>
 
         <div class="skill">
-          <p>Python</p>
-          <div class="progress"><span style="width: 80%"></span></div>
+          <p>Linux Administration</p>
+          <div class="progress"><span style="width: 95%"></span></div>
+        </div>
+
+        <div class="skill">
+          <p>Python & Bash (Automation)</p>
+          <div class="progress"><span style="width: 95%"></span></div>
         </div>
 
         <div class="skill">
           <p>Docker & Containers</p>
-          <div class="progress"><span style="width: 60%"></span></div>
+          <div class="progress"><span style="width: 95%"></span></div>
         </div>
 
         <div class="skill">
           <p>Terraform</p>
-          <div class="progress"><span style="width: 70%"></span></div>
+          <div class="progress"><span style="width: 95%"></span></div>
         </div>
 
         <div class="skill">
           <p>Git & GitHub</p>
-          <div class="progress"><span style="width: 78%"></span></div>
+          <div class="progress"><span style="width: 95%"></span></div>
         </div>
       </div>
+
+            <!-- Certifications -->
+      <div class="skills-box">
+        <h2>Certifications</h2>
+        
+        <div class="cert-grid">
+          <!-- AWS CCP -->
+          <div class="cert-card">
+            <img src="images/aws-logo.png" alt="AWS Logo">
+            <h3>AWS Certified Cloud Practitioner</h3>
+            <p>2025</p>
+            <a href="https://www.credly.com/badges/e128f259-a8cd-4348-87fb-bdddd9aff037/public_url" target="_blank">View Credential</a>
+          </div>
+
+          <!-- Example Python Certification -->
+          <div class="cert-card">
+            <img src="images/python-logo.png" alt="Python Logo">
+            <h3>Python Developer</h3>
+            <p>2025</p>
+            <a href="https://www.your-python-credential-link.com" target="_blank">View Credential</a>
+          </div>
+
+          <!-- Add more certs as needed -->
+        </div>
+      </div>
+
+<!--
+      CERTIFICATIONS SECTION
+      <div class="skills-box certifications">
+        <h2>Certifications</h2>
+        <ul class="cert-list">
+          <li>
+            <i class="fas fa-certificate"></i> AWS Certified Cloud Practitioner (2025)
+          </li>
+          <li>
+            <i class="fas fa-certificate"></i> Certified Ethical Hacker (2019)
+          </li>
+        </ul>
+      </div>
+-->
 
       <!-- Soft skills -->
       <div class="skills-box">
@@ -85,7 +131,7 @@
   <footer>
     <div class="footer-contact">
       <div class="footer-links">
-        <a href="mailto:paulinandege@gmail.com" target="_blank">
+        <a href="mailto:paulinandege11@gmail.com" target="_blank">
           <i class="fas fa-envelope"></i> Email
         </a>
         <a href="https://www.linkedin.com/in/pauline-andege-/" target="_blank">
@@ -94,9 +140,12 @@
         <a href="https://github.com/andegepauline" target="_blank">
           <i class="fab fa-github"></i> GitHub
         </a>
+        <a href="https://medium.com/@paulineandege" target="_blank">
+          <i class="fab fa-medium"></i> Medium
+        </a>
       </div>
       
-      <p>© 2025 Pauline Andege | All rights reserved</p>
+      <p>© <span id="year"></span> Pauline Andege | All rights reserved</p>
     </div>
   </footer>
 
@@ -108,6 +157,10 @@
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
+  </script>
+  <script>
+  // Get the current year from the user's system date
+  document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
 </body>

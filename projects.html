@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- Header  -->
+  <!-- Header -->
   <header>
     <nav class="navbar">
       <div class="logo">Pauline Andege</div>
@@ -23,104 +23,149 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html" class="active">Projects</a></li>
+        <!-- <li><a href="projectss.html" class="active">Projectss</a></li> -->
         <li><a href="skills.html">Skills</a></li>
-        <li><a href="cv.html">CV</a></li>
+        <!-- <li><a href="cv.html">CV</a></li> -->
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Projects section -->
+  <!-- Projects Section -->
   <section class="projects">
     <div class="projects-container">
       <h1>My Projects</h1>
-      <p>This collection of my cloud, devops, and python projects. Each project has a short description and GitHub repo link.</p>
+      <p>This collection of my cloud, DevOps, Python, and data analytics projects. Filter by category below.</p>
       
+      <!-- Project Filters -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="aws">AWS</button>
+        <button class="filter-btn" data-category="data">Data Entry & Analysis</button>
+       <!----> <button class="filter-btn" data-category="flask">Flask</button> -->
+      </div>
+
       <div class="project-cards">
 
-        <!-- Projects -->
-        <div class="project-card">
+        <!-- Project 1 -->
+        <div class="project-card" data-category="aws">
+          <img src="images/lambda-api.png" alt="Serverless API">    <!-- find image and fill -->
           <h2>Serverless Task Management API (AWS Lambda + API Gateway)</h2>
           <p>Built a CRUD-based task management API using AWS Lambda, API Gateway, and DynamoDB, fully serverless with secure IAM roles and monitoring.</p>
-          <a href="https://github.com/andegepauline/AWS-projects/tree/main/lambda%2BAPI">View on GitHub</a>
+          <a href="https://github.com/andegepauline/AWS-projects/tree/main/lambda%2BAPI" target="_blank">View on GitHub</a>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-category="data">
+          <img src="images/dashboard.png" alt="Retail Sales Excel Project">
+          <h2>Retail Sales Data Cleaning & Analysis (Excel)</h2>
+          <p>A beginner-friendly Excel project where I cleaned a messy retail sales dataset, standardized text and dates, calculated revenue, and analyzed sales by region and product.</p>
+          <a href="https://github.com/andegepauline/Data-Analytics/tree/main/Retail%20Sales%20Data%20Cleaning%20in%20Excel" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-category="aws">    
+          <img src="images/lambda-api.png" alt="Serverless API">    <!-- find image and fill -->
           <h2>Containerized Flask App on AWS ECS (Fargate)</h2>
           <p>Deployed a Flask web app in Docker containers using Amazon ECS (Fargate), ECR, and an Application Load Balancer for scalability and high availability.</p>
-          <a href="https://github.com/andegepauline/AWS-projects/tree/main/ecs-flask-app">View on GitHub</a>
+          <a href="https://github.com/andegepauline/AWS-projects/tree/main/ecs-flask-app" target="_blank">View on GitHub</a>
         </div>
 
-        <div class="project-card">
+        <!-- Project 4 -->
+        <div class="project-card" data-category="aws">
           <h2>Static Website Hosting on AWS S3</h2>
           <p>Hosted a static HTML site with Amazon S3, configured bucket policies, and enabled static website hosting for public access.</p>
-          <a href="https://github.com/andegepauline/AWS-projects/tree/main/s3">View on GitHub</a>
+          <a href="https://github.com/andegepauline/AWS-projects/tree/main/s3" target="_blank">View on GitHub</a>
         </div>
-        
-        <div class="project-card">
+
+        <!-- Project 5 -->
+        <div class="project-card" data-category="aws">
+          <img src="images/terraform-ec2.png" alt="Terraform EC2 Nginx">
           <h2>Provisioned an EC2 instance with Terraform & Nginx</h2>
           <p>Provisioned an EC2 instance with Terraform, set up networking with Security Groups, and deployed Nginx via automated user data scripts.</p>
-          <a href="https://github.com/andegepauline/AWS-projects/tree/main/terraform-ec2-nginx">View on GitHub</a>
+          <a href="https://github.com/andegepauline/AWS-projects/tree/main/terraform-ec2-nginx" target="_blank">View on GitHub</a>
         </div>
-        
-        <div class="project-card">
-          <h2>Project 2</h2>
-          <p>Placeholder description for a future project.</p>
-          <a href="#">View on GitHub</a>
-        </div>
-        <div class="project-card">
-          <h2>Project 3</h2>
-          <p>Placeholder description for a future project.</p>
-          <a href="#">View on GitHub</a>
-        </div>
-        <div class="project-card">
-          <h2>Project 4</h2>
-          <p>Placeholder description for a future project.</p>
-          <a href="#">View on GitHub</a>
-        </div>
-        <div class="project-card">
-          <h2>Project 5</h2>
-          <p>Placeholder description for a future project.</p>
-          <a href="#">View on GitHub</a>
-        </div>
-        <div class="project-card">
+
+        <!-- Placeholder Projects
+        <div class="project-card" data-category="data">
+          <img src="images/placeholder.png" alt="Project Placeholder">
           <h2>Project 6</h2>
-          <p>Placeholder description for a future project.</p>
+          <p>Placeholder description for a future Python project.</p>
           <a href="#">View on GitHub</a>
         </div>
+         -->
+
+        <!--
+         <div class="project-card" data-category="flask">
+          <img src="images/placeholder.png" alt="Project Placeholder">
+          <h2>Project 7</h2>
+          <p>Placeholder description for a future Flask project.</p>
+          <a href="#">View on GitHub</a>
+        </div>
+         -->
 
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-contact">
-      <div class="footer-links">
-        <a href="mailto:paulinandege@gmail.com" target="_blank">
-          <i class="fas fa-envelope"></i> Email
+<footer>
+  <div class="footer-contact">
+    <div class="footer-links">
+      <a href="mailto:paulinandege11@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://www.linkedin.com/in/pauline-andege-/" target="_blank">
+        <i class="fab fa-linkedin"></i>LinkedIn
+      </a>
+      <a href="https://github.com/andegepauline" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://medium.com/@paulineandege" target="_blank">
+          <i class="fab fa-medium"></i> Medium
         </a>
-        <a href="https://www.linkedin.com/in/pauline-andege-/" target="_blank">
-          <i class="fab fa-linkedin"></i>LinkedIn
-        </a>
-        <a href="https://github.com/andegepauline" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
-      
-      <p>© 2025 Pauline Andege | All rights reserved</p>
     </div>
-  </footer>
+    
+    <p>© <span id="year"></span> Pauline Andege | All rights reserved</p>
+  </div>
+</footer>
 
-  <!-- Script for hamburger -->
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+<!-- Script to auto-update year -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+<!-- Hamburger Script -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+<!-- Project Filter Script -->
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projects = document.querySelectorAll('.project-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const category = btn.dataset.category;
+
+      projects.forEach(project => {
+        if (category === 'all' || project.dataset.category === category) {
+          project.style.display = 'block';
+        } else {
+          project.style.display = 'none';
+        }
+      });
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
