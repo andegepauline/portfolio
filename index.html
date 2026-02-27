@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -26,7 +26,6 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="skills.html">Skills</a></li>
-       <!-- <li><a href="cv.html">CV</a></li> -->
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -38,14 +37,11 @@
       <div class="intro-text">
         <h1>Hi, I'm <span>Pauline Andege</span></h1>
         <p>
-          A passionate cloud enthusiast and Python developer.  
-          I enjoy building solutions that bring ideas to life - from AWS cloud projects  
-          to Python applications, with a growing focus on backend frameworks like Flask & Django.
+            A passionate Cloud Engineer and Data Analyst. I build scalable cloud solutions, automate workflows using Python and Bash, and transform raw data into actionable insights with Excel. My work spans AWS cloud projects and advanced data analysis. 
         </p>
         <div class="hero-buttons">
-          <a href="projects.html" class="btn">🚀 View my work</a>
-          <!-- <a href="cv/PAULINEANDEGE_CV.pdf" download target="_blank" class="btn secondary">📄 Download CV</a> -->
-          <a href="#services" class="btn tertiary">💼 My Services</a>
+          <a href="projects.html" class="btn">🚀 View my Projects</a>
+          <a href="#services" class="btn tertiary">💼 What I do</a>
         </div>
       </div>
 
@@ -55,44 +51,48 @@
     </div>
   </section>
 
-<!-- What I Do Section -->
-<section id="services" class="services">
-  <div class="services-container">
-    <h1>What I Do</h1>
-    <p class="subtitle">Services I offer to help you leverage the cloud effectively</p>
+  <!-- What I Do Section -->
+  <section id="services" class="services">
+    <div class="services-container">
+      <h1>What I Do</h1>
+      <p class="subtitle">Services I offer in Cloud Engineering and Data Analysis</p>
 
-    <div class="service-cards">
+      <div class="service-cards">
 
-      <div class="service-card">
-        <h2>Cloud Setup & Configuration</h2>
-        <p>I assist with setting up core AWS services like EC2, S3, IAM, and VPC for smooth cloud operations.</p>
+        <div class="service-card">
+          <h2>Cloud Architecture & AWS Setup</h2>
+          <p>Design, deploy, and configure AWS environments including EC2, S3, IAM, Lambda, and VPC for secure and scalable operations.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>Data Analysis & Reporting</h2>
+          <p>Extract insights from data using Python, SQL, Excel, and BI tools like Power BI & Tableau for informed decision-making.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>Automation & Scripting</h2>
+          <p>Develop automation scripts with Python and Bash to streamline cloud deployments, data pipelines, and repetitive tasks.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>Cloud Security & Compliance</h2>
+          <p>Audit IAM roles, policies, and resources to ensure secure, compliant, and well-governed cloud environments.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>Data Visualization & Dashboards</h2>
+          <p>Create interactive dashboards and reports using Excel, Power BI, and Tableau to clearly communicate data insights.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>Cost Optimization & Efficiency</h2>
+          <p>Analyze cloud usage, identify inefficiencies, and recommend cost-saving strategies for sustainable cloud operations.</p>
+        </div>
+
       </div>
-
-      <div class="service-card">
-        <h2>Website Hosting on AWS</h2>
-        <p>Deploy static and dynamic websites using S3, CloudFront, and Route 53 for fast, scalable hosting.</p>
-      </div>
-
-      <div class="service-card">
-        <h2>Basic Cloud Security Audits</h2>
-        <p>Review IAM roles, policies, and permissions to ensure your cloud environment follows security best practices.</p>
-      </div>
-
-      <div class="service-card">
-        <h2>Cost Optimization Guidance</h2>
-        <p>Analyze AWS usage and recommend ways to reduce unnecessary spending.</p>
-      </div>
-
-      <div class="service-card">
-        <h2>Cloud Storage Solutions</h2>
-        <p>Organize S3 buckets and implement lifecycle policies for scalable, efficient storage solutions.</p>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-  
   <!-- Footer -->
   <footer>
     <div class="footer-contact">
@@ -109,16 +109,16 @@
         <a href="https://medium.com/@paulineandege" target="_blank">
           <i class="fab fa-medium"></i> Medium
         </a>
+      </div>
+      
+      <p>© <span id="year"></span> Pauline Andege | All rights reserved</p>
     </div>
-    
-    <p>© <span id="year"></span> Pauline Andege | All rights reserved</p>
-  </div>
-</footer>
+  </footer>
 
-<!-- Script to auto-update year -->
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <!-- Script to auto-update year -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
   <!-- Hamburger Toggle Script -->
   <script>
