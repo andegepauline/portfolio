@@ -162,6 +162,7 @@ header {
   text-align: left;
   position: relative;
   overflow: hidden;
+  /*border: 2px solid #004080;  Added border for every project card */
 }
 
 .project-card img {
@@ -170,6 +171,7 @@ header {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
+  border: 2px solid #1976d2; /* Added border for each image */
 }
 
 .project-card:hover {
