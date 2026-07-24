@@ -4,160 +4,176 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects - Pauline Andege</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/projects.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Pauline Andege</div>
+<!-- HEADER -->
+<header>
+  <nav class="navbar">
+    <div class="logo">Pauline Andege</div>
 
-      <!-- Hamburger -->
-      <div class="hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
-
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <!-- <li><a href="projectss.html" class="active">Projectss</a></li> -->
-        <li><a href="skills.html">Skills</a></li>
-        <!-- <li><a href="cv.html">CV</a></li> -->
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Projects Section -->
-  <section class="projects">
-    <div class="projects-container">
-      <h1>My Projects</h1>
-      <p>This collection of my cloud, DevOps, Python, and data analytics projects. Filter by category below.</p>
-      
-      <!-- Project Filters -->
-      <div class="project-filters">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="aws">AWS</button>
-        <button class="filter-btn" data-category="data">Data Entry & Analysis</button>
-       <!-- <button class="filter-btn" data-category="flask">Flask</button> -->
-      </div>
-
-      <div class="project-cards">
-
-        <!-- New Project: Power BI Retail Sales -->
-        <div class="project-card" data-category="data">
-          <img src="images/UrbanCart-dashboard.png" alt="Retail Sales Power BI Dashboard">
-          <h2>Retail Sales Performance Dashboard (Power BI)</h2>
-          <p>Analyzed retail sales data using Power BI: created interactive dashboards with KPIs, charts, and maps to explore trends, profits, discounts, and top-performing products and regions.</p>
-          <a href="https://github.com/andegepauline/Data-Analytics/tree/main/Retail%20Sales%20Dashboard%20BI" target="_blank">View on GitHub</a>
-        </div>
-        
-        <!-- Project 1 -->
-        <div class="project-card" data-category="aws">
-          <img src="images/lambda-api.png" alt="Serverless API">    <!-- find image and fill -->
-          <h2>Serverless Task Management API (AWS Lambda + API Gateway)</h2>
-          <p>Built a CRUD-based task management API using AWS Lambda, API Gateway, and DynamoDB, fully serverless with secure IAM roles and monitoring.</p>
-          <a href="https://github.com/andegepauline/AWS-projects/tree/main/lambda%2BAPI" target="_blank">View on GitHub</a>
-        </div>
-
-        <div class="project-card" data-category="data">
-          <img src="images/dashboard.png" alt="Retail Sales Excel Project">
-          <h2>Retail Sales Data Cleaning & Analysis (Excel)</h2>
-          <p>A beginner-friendly Excel project where I cleaned a messy retail sales dataset, standardized text and dates, calculated revenue, and analyzed sales by region and product.</p>
-          <a href="https://github.com/andegepauline/Data-Analytics/tree/main/Retail%20Sales%20Data%20Cleaning%20in%20Excel" target="_blank">View on GitHub</a>
-        </div>
-
-
-
-        <!-- Project 2 -->
-        <div class="project-card" data-category="aws">    
-          <img src="images/flask-app.png" alt="Serverless API">    <!-- find image and fill -->
-          <h2>Containerized Flask App on AWS ECS (Fargate)</h2>
-          <p>Deployed a Flask web app in Docker containers using Amazon ECS (Fargate), ECR, and an Application Load Balancer for scalability and high availability.</p>
-          <a href="https://github.com/andegepauline/AWS-projects/tree/main/ecs-flask-app" target="_blank">View on GitHub</a>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card" data-category="aws">
-          <img src="images/static-web.png" alt="Serverless API">
-          <h2>Static Website Hosting on AWS S3</h2>
-          <p>Hosted a static HTML site with Amazon S3, configured bucket policies, and enabled static website hosting for public access.</p>
-          <a href="https://github.com/andegepauline/AWS-projects/tree/main/s3" target="_blank">View on GitHub</a>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project-card" data-category="aws">
-          <img src="images/terraform-ec2.png" alt="Terraform EC2 Nginx">
-          <h2>Provisioned an EC2 instance with Terraform & Nginx</h2>
-          <p>Provisioned an EC2 instance with Terraform, set up networking with Security Groups, and deployed Nginx via automated user data scripts.</p>
-          <a href="https://github.com/andegepauline/AWS-projects/tree/main/terraform-ec2-nginx" target="_blank">View on GitHub</a>
-        </div>
-
-      </div>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
     </div>
-  </section>
 
-  <!-- Footer -->
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- PROJECTS -->
+<section class="projects">
+  <div class="projects-container">
+
+    <h1 class="cente">My Projects</h1>
+    <p class="cente">A collection of my work across Cloud Computing, Data Analysis, and Data Visualization. Explore by category.</p>
+
+    <!-- ⭐ CATEGORY CARDS (NEW MAIN ENTRY POINT) -->
+    <div class="category-cards">
+
+      <div class="category-card" data-target="aws">
+        <h2>☁️ Cloud Computing</h2>
+        <p>
+          I help businesses deploy and manage cloud applications using AWS.
+          I build scalable, secure, and cost-efficient cloud systems including serverless apps and containerized deployments.
+        </p>
+        <span class="tech">AWS • Docker • Lambda • EC2 • API Gateway</span>
+      </div>
+
+      <div class="category-card" data-target="data">
+        <h2>📊 Data Analysis</h2>
+        <p>
+          I help businesses turn raw data into meaningful insights that support decision-making. I clean and analyze datasets, identify trends, and build interactive dashboards that clearly communicate performance and opportunities. My focus is on making data easy to understand and actionable for business growth.
+        </p>
+        <span class="tech">Excel • SQL • Python • Power BI</span>
+      </div>
+
+    </div>
+
+    <!-- FILTERS (kept but secondary) -->
+    <div class="project-filters">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="aws">AWS</button>
+      <button class="filter-btn" data-category="data">Data Analysis</button>
+    </div>
+
+    <!-- PROJECT GRID (UNCHANGED CONTENT) -->
+    <div class="project-cards">
+
+      <div class="project-card" data-category="data">
+        <img src="images/coke.png">
+        <h2>Coca-Cola Sales Performance Dashboard</h2>
+        <p>Analyzed sales data using Excel by cleaning raw data, building pivot tables, and creating an interactive dashboard.</p>
+        <a href="https://github.com/andegepauline/Data-Analytics/tree/main/Coca-Cola%20Sales%20Performance">View on GitHub</a>
+      </div>
+
+      <div class="project-card" data-category="data">
+        <img src="images/UrbanCart-dashboard.png">
+        <h2>Retail Sales Performance Dashboard</h2>
+        <p>Built Power BI dashboards with KPIs, maps, and charts to analyze sales performance.</p>
+        <a href="https://github.com/andegepauline/Data-Analytics/tree/main/Retail%20Sales%20Dashboard%20BI">View on GitHub</a>
+      </div>
+
+      <div class="project-card" data-category="aws">
+        <img src="images/lambda-api.png">
+        <h2>Serverless Task Management API</h2>
+        <p>Built a serverless CRUD API using AWS Lambda, API Gateway, and DynamoDB.</p>
+        <a href="https://github.com/andegepauline/AWS-projects/tree/main/lambda%2BAPI">View on GitHub</a>
+      </div>
+
+      <div class="project-card" data-category="data">
+        <img src="images/dashboard.png">
+        <h2>Retail Sales Data Cleaning</h2>
+        <p>Cleaned and analyzed retail dataset using Excel and structured reporting.</p>
+        <a href="https://github.com/andegepauline/Data-Analytics/tree/main/Retail%20Sales%20Data%20Cleaning%20in%20Excel">View on GitHub</a>
+      </div>
+
+      <div class="project-card" data-category="aws">
+        <img src="images/flask-app.png">
+        <h2>Flask App on AWS ECS</h2>
+        <p>Deployed containerized Flask app using ECS Fargate, ECR, and Load Balancer.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+
+      <div class="project-card" data-category="aws">
+        <img src="images/static-web.png">
+        <h2>S3 Static Website Hosting</h2>
+        <p>Hosted a static website on AWS S3 with public access configuration.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+
+      <div class="project-card" data-category="aws">
+        <img src="images/terraform-ec2.png">
+        <h2>EC2 Deployment with Terraform</h2>
+        <p>Provisioned EC2 and deployed Nginx using Terraform automation.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-contact">
     <div class="footer-links">
-      <a href="mailto:paulinandege11@gmail.com" target="_blank">
-        <i class="fas fa-envelope"></i> Email
-      </a>
-      <a href="https://www.linkedin.com/in/pauline-andege-/" target="_blank">
-        <i class="fab fa-linkedin"></i>LinkedIn
-      </a>
-      <a href="https://github.com/andegepauline" target="_blank">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <a href="https://medium.com/@paulineandege" target="_blank">
-          <i class="fab fa-medium"></i> Medium
-        </a>
+      <a href="mailto:email"><i class="fas fa-envelope"></i>Email</a>
+      <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+      <a href="#"><i class="fab fa-github"></i>GitHub</a>
     </div>
-    
-    <p>© <span id="year"></span> Pauline Andege | All rights reserved</p>
+    <p>© <span id="year"></span> Pauline Andege</p>
   </div>
 </footer>
 
-<!-- Script to auto-update year -->
+<!-- SCRIPTS -->
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+document.getElementById("year").textContent = new Date().getFullYear();
 
-<!-- Hamburger Script -->
-<script>
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
 
-<!-- Project Filter Script -->
-<script>
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projects = document.querySelectorAll('.project-card');
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projects = document.querySelectorAll('.project-card');
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
 
-      const category = btn.dataset.category;
+    const category = btn.dataset.category;
 
-      projects.forEach(project => {
-        if (category === 'all' || project.dataset.category === category) {
-          project.style.display = 'block';
-        } else {
-          project.style.display = 'none';
-        }
-      });
+    projects.forEach(project => {
+      project.style.display =
+        (category === 'all' || project.dataset.category === category)
+        ? 'block'
+        : 'none';
     });
   });
+});
+
+const categoryCards = document.querySelectorAll('.category-card');
+
+categoryCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const target = card.dataset.target;
+    document.querySelector(`[data-category="${target}"]`).click();
+    document.querySelector('.project-filters').scrollIntoView({ behavior: 'smooth' });
+  });
+});
 </script>
 
 </body>

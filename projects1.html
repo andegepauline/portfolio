@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Pauline Andege</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <nav class="navbar">
+    <div class="logo">Pauline Andege</div>
+
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- ================= PROJECT HERO ================= -->
+<section class="projects-hero">
+  <div class="projects-container">
+
+    <h1>My Projects</h1>
+    <p>
+      A collection of my work across Cloud Computing, Data Analysis, and Data Visualization.
+      Explore by category.
+    </p>
+
+    <!-- ================= CATEGORY CARDS (NEW STRUCTURE) ================= -->
+    <div class="category-grid">
+
+      <!-- CLOUD -->
+      <div class="category-card" onclick="filterCategory('aws')">
+        <i class="fas fa-cloud"></i>
+        <h2>Cloud Computing</h2>
+        <p>AWS, Docker, serverless systems, and deployment projects.</p>
+        <div class="tech-stack">
+          AWS • Docker • Lambda • EC2 • API Gateway
+        </div>
+      </div>
+
+      <!-- DATA ANALYSIS -->
+      <div class="category-card" onclick="filterCategory('data')">
+        <i class="fas fa-chart-line"></i>
+        <h2>Data Analysis</h2>
+        <p>Excel, SQL, Power BI dashboards and business insights.</p>
+        <div class="tech-stack">
+          Excel • Power BI • SQL • Python • Pandas
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ================= FILTER BUTTONS (SECONDARY) ================= -->
+    <div class="project-filters">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="aws">AWS</button>
+      <button class="filter-btn" data-category="data">Data</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= PROJECT GRID ================= -->
+<section class="projects">
+
+  <div class="project-cards">
+
+    <!-- DATA -->
+    <div class="project-card" data-category="data">
+      <img src="images/coke.png" alt="Coca-Cola Dashboard">
+      <h2>Coca-Cola Sales Dashboard</h2>
+      <p>Excel-based analysis with pivot tables and KPI tracking.</p>
+      <a href="https://github.com/..." target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card" data-category="data">
+      <img src="images/UrbanCart-dashboard.png" alt="Power BI Dashboard">
+      <h2>Retail Sales Power BI Dashboard</h2>
+      <p>Interactive dashboard showing trends, profits, and performance.</p>
+      <a href="https://github.com/..." target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card" data-category="data">
+      <img src="images/dashboard.png" alt="Excel Project">
+      <h2>Retail Sales Data Cleaning</h2>
+      <p>Cleaned messy dataset and performed structured analysis.</p>
+      <a href="https://github.com/..." target="_blank">View on GitHub</a>
+    </div>
+
+
+    <!-- AWS -->
+    <div class="project-card" data-category="aws">
+      <img src="images/lambda-api.png" alt="Serverless API">
+      <h2>Serverless Task API (Lambda + API Gateway)</h2>
+      <p>Built a full CRUD serverless API using AWS services.</p>
+      <a href="https://github.com/..." target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card" data-category="aws">
+      <img src="images/flask-app.png" alt="ECS Flask App">
+      <h2>Flask App on AWS ECS (Fargate)</h2>
+      <p>Containerized deployment using ECS, Docker, and ALB.</p>
+      <a href="https://github.com/..." target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card" data-category="aws">
+      <img src="images/static-web.png" alt="S3 Website">
+      <h2>Static Website on AWS S3</h2>
+      <p>Hosted a fully static site using S3 bucket hosting.</p>
+      <a href="https://github.com/..." target="_blank">View on GitHub</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-contact">
+
+    <div class="footer-links">
+      <a href="mailto:paulinandege11@gmail.com">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+
+      <a href="https://www.linkedin.com/in/pauline-andege-/" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+
+      <a href="https://github.com/andegepauline" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+
+      <a href="https://medium.com/" target="_blank">
+        <i class="fab fa-medium"></i> Medium
+      </a>
+    </div>
+
+    <p>© <span id="year"></span> Pauline Andege</p>
+
+  </div>
+</footer>
+
+
+<!-- ================= SCRIPTS ================= -->
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+<!-- Mobile nav -->
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+
+
+<!-- FILTER LOGIC (UPDATED STRUCTURE FRIENDLY) -->
+<script>
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projects = document.querySelectorAll('.project-card');
+
+function filterCategory(category) {
+  applyFilter(category);
+}
+
+function applyFilter(category) {
+
+  filterButtons.forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.dataset.category === category) {
+      btn.classList.add('active');
+    }
+  });
+
+  projects.forEach(project => {
+    const match = category === 'all' || project.dataset.category === category;
+    project.style.display = match ? 'block' : 'none';
+  });
+}
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    applyFilter(btn.dataset.category);
+  });
+});
+</script>
+
+</body>
+</html>

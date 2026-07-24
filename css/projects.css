@@ -1,5 +1,5 @@
 /* ================================
-   Projects.css
+   BASE STYLES
 ================================ */
 
 * {
@@ -10,14 +10,14 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  background: #f4f8ff;
   color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
-/* Navbar */
+/* ================================
+   NAVBAR
+================================ */
+
 header {
   background: #004080;
   padding: 1rem 2rem;
@@ -29,124 +29,126 @@ header {
   align-items: center;
   max-width: 1100px;
   margin: auto;
-  position: relative;
 }
 
 .logo {
-  font-size: 1.5rem;
+  color: white;
   font-weight: bold;
-  color: #fff;
-  flex: 1;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 1.5rem;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  list-style: none;
 }
 
 .nav-links a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-weight: 500;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  text-decoration: underline;
-}
-
-/* Hamburger for mobile */
 .hamburger {
   display: none;
-  font-size: 1.8rem;
-  color: #fff;
-  cursor: pointer;
+  color: white;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
+/* ================================
+   PROJECT SECTION
+================================ */
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #004080;
-    padding: 1rem;
-    margin-top: 0.5rem;
-    border-radius: 6px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 0.8rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-
-  .nav-links a:last-child {
-    border-bottom: none;
-  }
-}
-
-/* Projects Section */
 .projects {
-  flex: 1;
-  padding: 3rem 2rem;
-  background: #e6f0ff;
+  padding: 3rem 1.5rem;
 }
 
 .projects-container {
   max-width: 1100px;
   margin: auto;
-  text-align: center;
 }
 
-.projects-container h1 {
-  font-size: 2.5rem;
+h1 {
   color: #004080;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.projects-container p {
-  font-size: 1.1rem;
+p {
   margin-bottom: 2rem;
 }
 
-/* Project Filters */
+/* ================================
+   CATEGORY CARDS (MODERN + COLORFUL)
+================================ */
+
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.category-card {
+  background: linear-gradient(135deg, #ffffff, #eaf2ff);
+  padding: 1.8rem;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-left: 6px solid #1976d2;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.category-card h2 {
+  color: #004080;
+  margin-bottom: 0.6rem;
+}
+
+.category-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.tech {
+  display: inline-block;
+  background: rgba(25,118,210,0.12);
+  color: #1976d2;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* ================================
+   FILTERS
+================================ */
+
 .project-filters {
   display: flex;
-  justify-content: center;
   gap: 1rem;
+  justify-content: center;
   margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
 .filter-btn {
-  padding: 0.5rem 1rem;
   background: #004080;
-  color: #fff;
+  color: white;
   border: none;
+  padding: 8px 14px;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
 }
 
-.filter-btn:hover,
 .filter-btn.active {
   background: #1976d2;
-  transform: scale(1.05);
 }
 
-/* Project Cards */
+/* ================================
+   PROJECT CARDS
+================================ */
+
 .project-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -154,15 +156,15 @@ header {
 }
 
 .project-card {
-  background: #fff;
-  padding: 1.5rem;
+  background: white;
   border-radius: 10px;
+  padding: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  text-align: left;
-  position: relative;
-  overflow: hidden;
-  /*border: 2px solid #004080;  Added border for every project card */
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
 }
 
 .project-card img {
@@ -170,80 +172,33 @@ header {
   height: 160px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 1rem;
-  border: 2px solid #1976d2; /* Added border for each image */
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  background: #d0e0ff;
-}
+/* ================================
+   FOOTER
+================================ */
 
-.project-card h2 {
-  color: #004080;
-  margin-bottom: 0.8rem;
-}
-
-.project-card p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.project-card a {
-  color: #1976d2;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.project-card a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
 footer {
   background: #003366;
   color: white;
   text-align: center;
-  padding: 30px 20px;
-  width: 100%;
-  margin-top: auto;
+  padding: 20px;
+  margin-top: 3rem;
+}
+.cente{
+  text-align: center;
 }
 
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
+/* ================================
+   MOBILE
+================================ */
 
-.footer-links {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
 
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: 0.3s;
-}
-
-.footer-links a:hover {
-  color: #66ccff;
-}
-
-.footer-links i {
-  font-size: 20px;
-}
-
-footer p {
-  font-size: 0.9rem;
-  opacity: 0.85;
+  .hamburger {
+    display: block;
+  }
 }
